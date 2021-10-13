@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NormalBoiledController" customModule="Week5_EggTimer" customModuleProvider="target">
             <connections>
+                <outlet property="countDownLabel" destination="3CI-Gg-yls" id="pMH-BU-POh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CI-Gg-yls">
+                    <rect key="frame" x="157" y="398" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="DM9-JD-2o7"/>
+                        <constraint firstAttribute="height" constant="100" id="kAM-Uv-awa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3CI-Gg-yls" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="46H-wm-8IF"/>
+                <constraint firstItem="3CI-Gg-yls" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z4s-Cu-lbC"/>
+            </constraints>
             <point key="canvasLocation" x="122" y="95"/>
         </view>
     </objects>

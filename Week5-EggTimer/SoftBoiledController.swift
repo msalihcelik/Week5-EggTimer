@@ -8,14 +8,14 @@
 import UIKit
 
 final class SoftBoiledController: UIViewController {
-
+    
     @IBOutlet weak var countDownLabel: UILabel!
     private var timer = Timer()
     private var time = 240
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        countDownLabel.text = timeString(time: time)
+        countDownLabel.text = TimeString.beautify(sec: time)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -25,21 +25,12 @@ final class SoftBoiledController: UIViewController {
     @objc
     private func timerFunction() {
         time -= 1
-        countDownLabel.text = timeString(time: time)
+        countDownLabel.text = TimeString.beautify(sec: time)
         if time == 0 {
             countDownLabel.text = "YUMURTA OLDU!"
             timer.invalidate()
         }
         
     }
-    
-    private func timeString(time: Int) -> String {
-        let minutes = time / 60 % 60
-        let seconds = time % 60
-        return String(format:"%02i:%02i", minutes, seconds)
-    }
-    
-    
-  
-
+       
 }

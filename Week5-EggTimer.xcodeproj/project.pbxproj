@@ -19,6 +19,7 @@
 		6744D93B271700AB00513247 /* NormalBoiledController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6744D939271700AB00513247 /* NormalBoiledController.xib */; };
 		6744D93E271700F500513247 /* CoddledController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6744D93C271700F500513247 /* CoddledController.swift */; };
 		6744D93F271700F500513247 /* CoddledController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6744D93D271700F500513247 /* CoddledController.xib */; };
+		6744D96927175B7100513247 /* TimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6744D96827175B7100513247 /* TimeString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6744D939271700AB00513247 /* NormalBoiledController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalBoiledController.xib; sourceTree = "<group>"; };
 		6744D93C271700F500513247 /* CoddledController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoddledController.swift; sourceTree = "<group>"; };
 		6744D93D271700F500513247 /* CoddledController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoddledController.xib; sourceTree = "<group>"; };
+		6744D96827175B7100513247 /* TimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				6744D939271700AB00513247 /* NormalBoiledController.xib */,
 				6744D93C271700F500513247 /* CoddledController.swift */,
 				6744D93D271700F500513247 /* CoddledController.xib */,
+				6744D96827175B7100513247 /* TimeString.swift */,
 			);
 			path = "Week5-EggTimer";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				6744D9212716F5D200513247 /* AppDelegate.swift in Sources */,
 				6744D93A271700AB00513247 /* NormalBoiledController.swift in Sources */,
 				6744D9232716F5D200513247 /* SceneDelegate.swift in Sources */,
+				6744D96927175B7100513247 /* TimeString.swift in Sources */,
 				6744D93E271700F500513247 /* CoddledController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,22 +8,29 @@
 import UIKit
 
 class NormalBoiledController: UIViewController {
-
+    
+    @IBOutlet weak var countDownLabel: UILabel!
+    private var timer = Timer()
+    private var time = 240
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        countDownLabel.text = TimeString.beautify(sec: time)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunction), userInfo: nil, repeats: true)
     }
-    */
-
+    
+    @objc
+    private func timerFunction() {
+        time -= 1
+        countDownLabel.text = TimeString.beautify(sec: time)
+        if time == 0 {
+            countDownLabel.text = "YUMURTA OLDU!"
+            timer.invalidate()
+        }
+        
+    }
+    
 }
