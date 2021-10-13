@@ -32,6 +32,9 @@
                                     <segment title="Normal"/>
                                     <segment title="Çok"/>
                                 </segments>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="pOm-E2-Gav"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

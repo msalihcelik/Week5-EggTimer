@@ -8,13 +8,42 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    enum Mood: Int {
+        case soft
+        case normal
+        case coddled
+        case unselected
+    }
+    var temp: Mood = .unselected
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
+        switch temp {
+        case .soft:
+            let viewController = UIViewController(nibName: "SoftBoiledController", bundle: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        case .normal:
+            let viewController = UIViewController(nibName: "NormalBoiledController", bundle: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        case .coddled:
+            let viewController = UIViewController(nibName: "CoddledController", bundle: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        default:
+            let alert = UIAlertController(title: "Lütfen seçim yapınız!", message: "", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
     }
+    
+    @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
+        guard let mood = Mood(rawValue: sender.selectedSegmentIndex) else { return }
+        temp = mood
+    }
+    
 }
 

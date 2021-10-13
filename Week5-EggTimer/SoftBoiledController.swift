@@ -7,7 +7,7 @@
 
 import UIKit
 
-class softBoiledController: UIViewController {
+class SoftBoiledController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
