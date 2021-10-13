@@ -30,7 +30,6 @@ final class NormalBoiledController: UIViewController {
             countDownLabel.text = "YUMURTA OLDU!"
             timer.invalidate()
         }
-        
     }
     
 }

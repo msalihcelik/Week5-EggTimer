@@ -8,7 +8,7 @@
 import UIKit
 
 final class CoddledController: UIViewController {
-
+    
     @IBOutlet weak var countDownLabel: UILabel!
     private var timer = Timer()
     private var time = 360
@@ -17,7 +17,7 @@ final class CoddledController: UIViewController {
         super.viewDidLoad()
         countDownLabel.text = TimeString.beautify(sec: time)
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunction), userInfo: nil, repeats: true)
     }
@@ -30,7 +30,6 @@ final class CoddledController: UIViewController {
             countDownLabel.text = "YUMURTA OLDU!"
             timer.invalidate()
         }
-        
     }
-
+    
 }

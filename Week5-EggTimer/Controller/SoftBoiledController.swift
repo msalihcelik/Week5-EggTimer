@@ -30,7 +30,6 @@ final class SoftBoiledController: UIViewController {
             countDownLabel.text = "YUMURTA OLDU!"
             timer.invalidate()
         }
-        
     }
-       
+    
 }

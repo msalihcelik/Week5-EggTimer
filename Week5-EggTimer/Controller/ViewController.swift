@@ -45,6 +45,5 @@ final class ViewController: UIViewController {
         temp = mood
     }
     
-    
 }
 
