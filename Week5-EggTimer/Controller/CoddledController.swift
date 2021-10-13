@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CoddledController: UIViewController {
+final class CoddledController: UIViewController {
 
     @IBOutlet weak var countDownLabel: UILabel!
     private var timer = Timer()
-    private var time = 240
+    private var time = 360
     
     override func viewDidLoad() {
         super.viewDidLoad()

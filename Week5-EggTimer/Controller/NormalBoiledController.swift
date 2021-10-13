@@ -7,11 +7,11 @@
 
 import UIKit
 
-class NormalBoiledController: UIViewController {
+final class NormalBoiledController: UIViewController {
     
     @IBOutlet weak var countDownLabel: UILabel!
     private var timer = Timer()
-    private var time = 240
+    private var time = 300
     
     override func viewDidLoad() {
         super.viewDidLoad()
