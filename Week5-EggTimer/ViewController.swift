@@ -24,13 +24,13 @@ class ViewController: UIViewController {
     @IBAction func startButtonTapped(_ sender: Any) {
         switch temp {
         case .soft:
-            let viewController = UIViewController(nibName: "SoftBoiledController", bundle: nil)
+            let viewController = SoftBoiledController(nibName: "SoftBoiledController", bundle: nil)
             self.navigationController?.pushViewController(viewController, animated: true)
         case .normal:
-            let viewController = UIViewController(nibName: "NormalBoiledController", bundle: nil)
+            let viewController = NormalBoiledController(nibName: "NormalBoiledController", bundle: nil)
             self.navigationController?.pushViewController(viewController, animated: true)
         case .coddled:
-            let viewController = UIViewController(nibName: "CoddledController", bundle: nil)
+            let viewController = CoddledController(nibName: "CoddledController", bundle: nil)
             self.navigationController?.pushViewController(viewController, animated: true)
         default:
             let alert = UIAlertController(title: "Lütfen seçim yapınız!", message: "", preferredStyle: .alert)
@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         guard let mood = Mood(rawValue: sender.selectedSegmentIndex) else { return }
         temp = mood
     }
+    
     
 }
 
