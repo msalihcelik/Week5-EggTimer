@@ -7,11 +7,11 @@
 
 import UIKit
 
-class SoftBoiledController: UIViewController {
+final class SoftBoiledController: UIViewController {
 
     @IBOutlet weak var countDownLabel: UILabel!
-    var timer = Timer()
-    var time = 240
+    private var timer = Timer()
+    private var time = 240
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class SoftBoiledController: UIViewController {
     }
     
     @objc
-    func timerFunction() {
+    private func timerFunction() {
         time -= 1
         countDownLabel.text = timeString(time: time)
         if time == 0 {
@@ -33,7 +33,7 @@ class SoftBoiledController: UIViewController {
         
     }
     
-    func timeString(time: Int) -> String {
+    private func timeString(time: Int) -> String {
         let minutes = time / 60 % 60
         let seconds = time % 60
         return String(format:"%02i:%02i", minutes, seconds)
